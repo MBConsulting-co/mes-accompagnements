@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MB Consulting — Offres Conseil</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#7dd3fc;--muted:#94a3b8;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0;background:linear-gradient(180deg,#061226 0%, #081426 100%);color:#e6eef6;line-height:1.45}
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);color:#04293a;font-weight:700}
+    h1{font-size:20px;margin:0}
+    p.lead{color:var(--muted);margin:6px 0 0}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:24px}
+    .main{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 6px 24px rgba(2,6,23,0.6)}
+
+    .offer-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .card h3{margin:0 0 8px;font-size:16px}
+    .price{font-weight:700;font-size:18px;margin-bottom:8px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-size:13px;margin-bottom:10px}
+    ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    .proof{margin-top:12px;padding:12px;border-radius:10px;background:rgba(13,21,30,0.6);border:1px solid rgba(125,211,252,0.06)}
+    .muted{color:var(--muted);font-size:13px}
+
+    aside{background:linear-gradient(180deg,#071226,#061022);padding:18px;border-radius:12px;height:100%}
+    .cta{display:block;background:linear-gradient(90deg,#06b6d4,#60a5fa);color:#04293a;text-decoration:none;padding:12px 14px;border-radius:10px;font-weight:700;text-align:center}
+    .small{font-size:13px;color:var(--muted);margin-top:8px}
+
+    .metrics{display:flex;gap:12px;margin-top:14px}
+    .metric{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px;flex:1;text-align:center}
+    .metric b{display:block;font-size:18px}
+
+    footer{margin-top:26px;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media(max-width:980px){.grid{grid-template-columns:1fr;}.offer-row{grid-template-columns:1fr;}.aside-slim{order:2}}
+
+    /* helper */
+    pre.code{background:#020617;padding:12px;border-radius:8px;color:#cde;overflow:auto;font-size:13px}
+    .badge{display:inline-block;padding:6px 8px;border-radius:8px;background:rgba(125,211,252,0.09);color:var(--accent);font-weight:600}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">MB</div>
+        <div>
+          <h1>MB Consulting — Offres Conseil</h1>
+          <p class="lead">Des offres claires, avec des preuves mesurables. Pas d’enfumage — des résultats.</p>
+        </div>
+      </div>
+      <div class="right">
+        <div class="muted">Contact rapide — <a href="#contact" style="color:var(--accent);text-decoration:none">Réserver une démo</a></div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main class="main">
+        <section>
+          <h2 style="margin:0 0 8px">Offres</h2>
+          <p class="muted">Chaque offre contient : diagnostic chiffré, livrable actionnable, et indicateurs de suivi. Les prix affichés sont HT.</p>
+
+          <div class="offer-row">
+            <!-- Clarté EXPRESS -->
+            <article class="card">
+              <div class="pill">Clarté EXPRESS</div>
+              <h3>30 jours — Résultat immédiat</h3>
+              <div class="price">1 500 € HT</div>
+              <ul>
+                <li>Diagnostic express (1 session + audit 60 min)</li>
+                <li>Carte visuelle + feuille de route 30j (1 page)</li>
+                <li>Session d’activation 90 min</li>
+              </ul>
+              <div class="proof">
+                <div class="muted"><strong>Preuves & indicateurs</strong></div>
+                <ul>
+                  <li>Temps passé sur tâches non-stratégiques (%) — avant/après</li>
+                  <li>Nombre de projets ouverts — avant/après</li>
+                  <li>Charge mentale (auto‑éval /10) — rapport 1 page</li>
+                </ul>
+                <div class="small">Livrable : feuille de route 30j + tableau de suivi simple (Google Sheet)</div>
+              </div>
+            </article>
+
+            <!-- Vision en ACTION -->
+            <article class="card">
+              <div class="pill">Vision en ACTION</div>
+              <h3>2 mois — Stratégie + exécution</h3>
+              <div class="price">3 000 € HT</div>
+              <ul>
+                <li>Vision Map + jalons trimestriels</li>
+                <li>Carnet de bord collaboratif (Notion / Google Doc)</li>
+                <li>2 sessions stratégiques + points hebdo</li>
+              </ul>
+              <div class="proof">
+                <div class="muted"><strong>Preuves & indicateurs</strong></div>
+                <ul>
+                  <li>Tableau de bord d’avancement (% complété)</li>
+                  <li>Indicateur stress projet (SEDA) — suivi hebdo</li>
+                  <li>Comparaison prévu vs réalisé à J60</li>
+                </ul>
+                <div class="small">Livrable : Vision Map + Dashboard suivi + synthèse J60</div>
+              </div>
+            </article>
+
+            <!-- Duo de CHOC -->
+            <article class="card">
+              <div class="pill">Duo de CHOC</div>
+              <h3>Accompagnement continu</h3>
+              <div class="price">À partir de 2 500 €/mois HT</div>
+              <ul>
+                <li>Audit délégation & plan RH</li>
+                <li>Accompagnement opérationnel 1:1</li>
+                <li>Reporting mensuel et priorisation</li>
+              </ul>
+              <div class="proof">
+                <div class="muted"><strong>Preuves & indicateurs</strong></div>
+                <ul>
+                  <li>% tâches déléguées initialement</li>
+                  <li>Heures libérées / mois & valeur estimée (€)</li>
+                  <li>Rapport mensuel + interview client trimestrielle</li>
+                </ul>
+                <div class="small">Livrable : Dashboard ROI temps + rapport mensuel</div>
+              </div>
+            </article>
+          </div>
+
+          <!-- How it works -->
+          <section style="margin-top:20px">
+            <h3 style="margin-bottom:6px">Comment on prouve — méthode rapide</h3>
+            <div class="muted">Processus standardisé, visible et simple pour le client.</div>
+            <ol style="margin-top:8px;color:var(--muted)">
+              <li><strong>J0 — Diagnostic chiffré</strong> : on pose les métriques, capture des données (1h).</li>
+              <li><strong>J7 — Livrable actionnable</strong> : feuille de route + outils partagés.</li>
+              <li><strong>Hebdo — Micro‑reporting</strong> : 1 page / semaine, pas de bla‑bla.</li>
+              <li><strong>J30 / J60 / Trimestriel</strong> : comparatif avant/après + ajustements.</li>
+            </ol>
+          </section>
+
+          <section style="margin-top:18px">
+            <h3 style="margin-bottom:6px">Garanties & règles</h3>
+            <div class="muted">Deux engagements pour rassurer le prospect :</div>
+            <ul style="margin-top:8px;color:var(--muted)">
+              <li><strong>Garantie de clarté</strong> : livraison d’un plan actionnable à J7.</li>
+              <li><strong>Mesure transparente</strong> : accès au dashboard tout au long de la mission.</li>
+            </ul>
+          </section>
+
+        </section>
+
+        <footer>
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+            <div class="muted">Besoin d’adapter une offre selon ton contexte ? Réserve un créneau de 20 min.</div>
+            <a class="cta" href="#contact">Réserver une démo</a>
+          </div>
+        </footer>
+      </main>
+
+      <aside class="aside-slim">
+        <aside>
+          <h4 style="margin:0 0 8px">Résumé rapide</h4>
+          <div class="muted">Preuves intégrées = conversion accélérée. Chaque offre est pensée pour réduire le doute et rendre visible le ROI dès les premières semaines.</div>
+
+          <div class="metrics">
+            <div class="metric">
+              <div class="muted">Temps libéré/mois</div>
+              <b>→ calculé en live</b>
+            </div>
+            <div class="metric">
+              <div class="muted">Conversion cible</div>
+              <b>+15–30%</b>
+            </div>
+          </div>
+
+          <div style="margin-top:14px">
+            <h5 style="margin:0 0 6px">Témoignages</h5>
+            <div class="muted">Insère 1 à 3 témoignages courts (30–60s) — idéalement chiffrés. Exemple : “+20% CA en 3 mois grâce à la feuille de route”</div>
+          </div>
+
+          <div style="margin-top:16px">
+            <h5 style="margin:0 0 6px">FAQ rapide</h5>
+            <div class="muted"><strong>Q :</strong> J’ai peur d’un engagement long.<br/><strong>R :</strong> Commence par Clarté EXPRESS. On garde la décision après J30.</div>
+          </div>
+
+          <div style="margin-top:18px">
+            <a class="cta" href="#contact">Demander un audit gratuit</a>
+            <div class="small" style="text-align:center;margin-top:8px">Disponibilités limitées — max 6 clients actifs</div>
+          </div>
+        </aside>
+      </aside>
+    </div>
+
+    <section id="contact" style="margin-top:22px;background:rgba(255,255,255,0.01);padding:18px;border-radius:12px">
+      <h3 style="margin:0 0 8px">Contact & réservation</h3>
+      <div class="muted">Remplis ce formulaire minimal — je te réponds sous 48h.</div>
+      <form style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px">
+        <input placeholder="Prénom Nom" style="padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+        <input placeholder="Email" style="padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+        <input placeholder="Société" style="padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+        <input placeholder="Téléphone (optionnel)" style="padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+        <textarea placeholder="Message / Contrainte principale" style="grid-column:1/3;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" rows="4"></textarea>
+        <div style="grid-column:1/3;display:flex;gap:10px;align-items:center">
+          <button type="button" class="cta">Envoyer</button>
+          <div class="small">Ou réserve un créneau <a href="#" style="color:var(--accent);text-decoration:none">Calendly</a></div>
+        </div>
+      </form>
+    </section>
+
+  </div>
+</body>
+</html>
